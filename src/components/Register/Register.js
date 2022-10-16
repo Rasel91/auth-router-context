@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../Contexts/UserContext';
 
 const Register = () => {
+    const {user}=useContext(AuthContext);
+    const {createUser} =  useContext(AuthContext);
+
+    console.log('object',createUser,user)
 
     const handleSubmit = event => {
         event.preventDefault();
